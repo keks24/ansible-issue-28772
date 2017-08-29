@@ -1,6 +1,3 @@
 ---
 # apt module
 CACHE_VALID_TIME: 86400
-
-# unattended-upgrades
-#unattended_email:
