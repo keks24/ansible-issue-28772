@@ -1,5 +1,5 @@
 #### reproduce issue
-git clone https://github.com/keks24/ansible-issue-28772
+git clone https://github.com/keks24/ansible-issue-28772<br>
 cd ./ansible-issue-28772
 vagrant up
 
