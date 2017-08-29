@@ -1,0 +1,5 @@
+# ignore generated vagrant files
+.vagrant
+
+# ignore generated ansible files
+*.retry
