@@ -1,0 +1,30 @@
+---
+- name: handler_start_apache2
+  systemd:
+    name: "apache2.service"
+    state: started
+    daemon_reload: yes
+
+- name: handler_stop_apache2
+  systemd:
+    name: "apache2.service"
+    state: stopped
+    daemon_reload: yes
+
+- name: handler_restart_apache2
+  systemd:
+    name: "apache2.service"
+    state: restarted
+    daemon_reload: yes
+
+- name: handler_reload_apache2
+  systemd:
+    name: "apache2.service"
+    state: reloaded
+    daemon_reload: yes
+
+- name: handler_enable_apache2
+  systemd:
+    name: "apache2.service"
+    enabled: yes
+    daemon_reload: yes

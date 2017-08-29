@@ -1,0 +1,22 @@
+---
+- name: create group "{{ username }}"
+  group:
+    name: "{{ username }}"
+    state: present
+  tags:
+    - apache2
+    - group
+    - create_group
+
+# the module "user" utilises the unix command "useradd" to add users which DOES NOT get along with colons!! Do not use default settings of the "password" plugin!!
+- name: create user "{{ username }}", add to group "{{ username }}", set a random password with 20 random characters, set user shell to "/bin/bash" and set home directory to "/var/www/{{ domain_name }}/"
+  user:
+    name: "{{ username }}"
+    group: "{{ username }}"
+    # the comment line works, the other one not
+    #password: "{{ lookup('password', '/home/vagrant/credentials/password_{{ username }} chars=ascii_letters,digits,hexdigits') | password_hash('sha512') }}"
+    password: "{{ lookup('password', '/home/vagrant/credentials/password_{{ username }}') }}"
+    shell: "/bin/bash"
+    home: "/var/www/{{ domain_name }}/"
+    state: present
+    update_password: on_create
