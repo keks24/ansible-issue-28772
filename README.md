@@ -1,5 +1,6 @@
 #### reproduce issue
 git clone https://github.com/keks24/ansible-issue-28772
+cd ./ansible-issue-28772
 vagrant up
 
 when vms are already set up, use:
