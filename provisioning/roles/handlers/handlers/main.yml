@@ -2,4 +2,3 @@
 
 - include: "apache2.yml"
 - include: "sshd.yml"
-- include: "unattended-upgrades.yml"
