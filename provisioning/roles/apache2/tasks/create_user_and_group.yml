@@ -13,8 +13,9 @@
   user:
     name: "{{ username }}"
     group: "{{ username }}"
-    # the comment line works, the other one not
+    # the comment lines work, the other one not
     #password: "{{ lookup('password', '/home/vagrant/credentials/password_{{ username }} chars=ascii_letters,digits,hexdigits') | password_hash('sha512') }}"
+    #password: "{{ lookup('password', '/home/vagrant/credentials/password_{{ username }}') | password_hash('sha512') }}"
     password: "{{ lookup('password', '/home/vagrant/credentials/password_{{ username }}') }}"
     shell: "/bin/bash"
     home: "/var/www/{{ domain_name }}/"
