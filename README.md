@@ -1,3 +1,9 @@
+#### requirements
+```
+vagrant
+vagrant vbguest plugin: vagrant plugin install vagrant-vbguest
+```
+
 #### reproduce issue
 ```bash
 git clone https://github.com/keks24/ansible-issue-28772
