@@ -1,16 +1,21 @@
 #### reproduce issue
-git clone https://github.com/keks24/ansible-issue-28772<br>
-cd ./ansible-issue-28772<br>
-vagrant up<br>
+```bash
+git clone https://github.com/keks24/ansible-issue-28772
+cd ./ansible-issue-28772
+vagrant up
+```
 
-when vms are already set up, use:<br>
-vagrant provision<br>
-or<br>
-vagrant up --provision<br>
-
-to check user passwords:<br>
+to check user passwords in provision-vm:<br>
+```bash
 vagrant ssh provision-vm
 cd credentials
+```
+
+to re-create development-vm:
+```bash
+vagrant destroy development-vm
+vagrant provision
+```
 
 #### link
 https://github.com/ansible/ansible/issues/28772
