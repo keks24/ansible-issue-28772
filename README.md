@@ -8,5 +8,9 @@ vagrant provision<br>
 or<br>
 vagrant up --provision<br>
 
+to check user passwords:<br>
+vagrant ssh provision-vm
+cd credentials
+
 #### link
 https://github.com/ansible/ansible/issues/28772
