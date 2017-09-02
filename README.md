@@ -1,5 +1,6 @@
 #### requirements
 ```
+virtualbox
 vagrant
 vagrant vbguest plugin: vagrant plugin install vagrant-vbguest
 ```
